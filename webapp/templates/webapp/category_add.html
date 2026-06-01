@@ -1,0 +1,14 @@
+{% extends 'webapp/base.html' %}
+{% block content %}
+<h4 class="mb-3">Add Category</h4>
+<form method="post" style="max-width: 500px;">
+    {% csrf_token %}
+    <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Title" required>
+    </div>
+    <div class="mb-3">
+        <textarea name="description" class="form-control" rows="4" placeholder="Description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add category</button>
+</form>
+{% endblock %}

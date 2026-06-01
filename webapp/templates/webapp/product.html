@@ -1,0 +1,16 @@
+{% extends 'webapp/base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{ product.image }}" class="img-fluid rounded" alt="{{ product.name }}">
+    </div>
+    <div class="col-md-8">
+        <h2>{{ product.name }}</h2>
+        <p class="text-muted">{{ product.category }}</p>
+        <p><strong>Price: {{ product.price }}$</strong></p>
+        <p style="white-space: pre-wrap;">{{ product.description }}</p>
+        <p class="text-muted"><small>added: {{ product.created_at|date:"d/m/Y H:i" }}</small></p>
+        <a href="{% url 'products_view' %}" class="btn btn-secondary">Назад</a>
+    </div>
+</div>
+{% endblock %}
