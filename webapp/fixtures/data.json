@@ -1,54 +1,78 @@
 [
-  {
-    "model": "webapp.category",
-    "pk": 1,
-    "fields": {
-      "name": "Электроника",
-      "description": "Телефоны, ноутбуки и другая техника"
-    }
-  },
-  {
-    "model": "webapp.category",
-    "pk": 2,
-    "fields": {
-      "name": "Одежда",
-      "description": "Мужская и женская одежда"
-    }
-  },
-  {
-    "model": "webapp.product",
-    "pk": 1,
-    "fields": {
-      "name": "iPhone 14",
-      "description": "Смартфон Apple iPhone 14 с отличной камерой.",
-      "category": 1,
-      "created_at": "2024-01-15T10:00:00Z",
-      "price": "999.99",
-      "image": "https://avatars.mds.yandex.net/i?id=cfc1183ead58e7e885938b4486457bbc1f32804d-5323959-images-thumbs&n=13"
-    }
-  },
-  {
-    "model": "webapp.product",
-    "pk": 2,
-    "fields": {
-      "name": "MacBook Pro",
-      "description": "Ноутбук Apple MacBook Pro с чипом M2.",
-      "category": 1,
-      "created_at": "2024-01-16T12:00:00Z",
-      "price": "1999.99",
-      "image": "https://avatars.mds.yandex.net/i?id=40d904be5ff93305bb52dece2282c0f4f97e3dd0-4524739-images-thumbs&n=13"
-    }
-  },
-  {
-    "model": "webapp.product",
-    "pk": 3,
-    "fields": {
-      "name": "Кроссовки Nike",
-      "description": "Удобные кроссовки для бега.",
-      "category": 2,
-      "created_at": "2024-01-17T09:00:00Z",
-      "price": "120.00",
-      "image": "https://avatars.mds.yandex.net/i?id=f1650fc1084e7707c2ec875aa98b55c7-4600873-images-thumbs&n=13"
-    }
+{
+  "model": "webapp.category",
+  "pk": 1,
+  "fields": {
+    "name": "Электроника",
+    "description": "Телефоны, ноутбуки и другая техника"
   }
+},
+{
+  "model": "webapp.category",
+  "pk": 2,
+  "fields": {
+    "name": "Одежда",
+    "description": "Мужская и женская одежда"
+  }
+},
+{
+  "model": "webapp.category",
+  "pk": 3,
+  "fields": {
+    "name": "flowers",
+    "description": ""
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "iPhone 14",
+    "description": "Смартфон Apple iPhone 14 с отличной камерой.",
+    "category": 1,
+    "created_at": "2024-01-15T10:00:00Z",
+    "price": "999.99",
+    "image": "https://avatars.mds.yandex.net/i?id=cfc1183ead58e7e885938b4486457bbc1f32804d-5323959-images-thumbs&n=13",
+    "stock": 0
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "MacBook Pro",
+    "description": "Ноутбук Apple MacBook Pro с чипом M2.",
+    "category": 1,
+    "created_at": "2024-01-16T12:00:00Z",
+    "price": "1999.99",
+    "image": "https://avatars.mds.yandex.net/i?id=40d904be5ff93305bb52dece2282c0f4f97e3dd0-4524739-images-thumbs&n=13",
+    "stock": 0
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "Кроссовки Nike",
+    "description": "Удобные кроссовки для бега.",
+    "category": 2,
+    "created_at": "2024-01-17T09:00:00Z",
+    "price": "120.00",
+    "image": "https://avatars.mds.yandex.net/i?id=f1650fc1084e7707c2ec875aa98b55c7-4600873-images-thumbs&n=13",
+    "stock": 0
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "roses",
+    "description": "beauty roses",
+    "category": 3,
+    "created_at": "2026-06-01T09:13:12.522Z",
+    "price": "2000.00",
+    "image": "https://klike.net/uploads/posts/2019-12/1575709006_7.jpg",
+    "stock": 0
+  }
+}
 ]

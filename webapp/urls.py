@@ -1,5 +1,5 @@
 from django.urls import path
-from webapp.views import products_view, product_view, product_add_view, category_add_view, prodcut_edit_view, product_delete_view
+from webapp.views import products_view, product_view, product_add_view, category_add_view, product_edit_view, product_delete_view
 
 urlpatterns = [
     path('', products_view, name='index'),
