@@ -18,8 +18,9 @@ class Product(models.Model):
     description = models.TextField(null=True, blank=True, verbose_name='Описание')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время добавления')
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Стоимость')
+    price = models.DecimalField(max_digits=7, decimal_places=2, verbose_name='Стоимость')
     image = models.URLField(verbose_name='Изображение')
+    stock = models.PositiveIntegerField(default=0, verbose_name='Остаток')
 
     class Meta:
         verbose_name = 'Товар'
