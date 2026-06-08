@@ -1,0 +1,35 @@
+{% csrf_token %}
+<div class="mb-3">
+    <label class="form-label">Наименование</label>
+    {{ form.name.errors }}
+    <input type="text" name="name" class="form-control" value="{{ form.name.value|default:'' }}" required>
+</div>
+<div class="mb-3">
+    <label class="form-label">Стоимость</label>
+    {{ form.price.errors }}
+    <input type="text" name="price" class="form-control" value="{{ form.price.value|default:'' }}" required>
+</div>
+<div class="mb-3">
+    <label class="form-label">Изображение (ссылка)</label>
+    {{ form.image.errors }}
+    <input type="text" name="image" class="form-control" value="{{ form.image.value|default:'' }}" required>
+</div>
+<div class="mb-3">
+    <label class="form-label">Категория</label>
+    <select name="category" class="form-select" required>
+        <option value="">Выберите категорию</option>
+        {% for category in categories %}
+        <option value="{{ category.pk }}" {% if form.category.value == category.pk %}selected{% endif %}>{{ category.name }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label class="form-label">Остаток</label>
+    {{ form.stock.errors }}
+    <input type="number" name="stock" class="form-control" value="{{ form.stock.value|default:0 }}" min="0" required>
+</div>
+<div class="mb-3">
+    <label class="form-label">Описание</label>
+    {{ form.description.errors }}
+    <textarea name="description" class="form-control" rows="4">{{ form.description.value|default:'' }}</textarea>
+</div>
