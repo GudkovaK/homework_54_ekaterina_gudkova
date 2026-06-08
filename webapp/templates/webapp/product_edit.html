@@ -1,2 +1,9 @@
 {% extends 'webapp/base.html' %}
 {% block content %}
+<h4 class="mb-3">Edit Product</h4>
+<form method="post" style="max-width: 500px;">
+    {% include 'webapp/product_form.html' %}
+    <button type="submit" class="btn btn-success">Сохранить</button>
+    <a href="{% url 'product_view' product.pk %}" class="btn btn-secondary">Отмена</a>
+</form>
+{% endblock %}
