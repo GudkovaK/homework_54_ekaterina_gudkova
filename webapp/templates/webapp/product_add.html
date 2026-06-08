@@ -2,27 +2,7 @@
 {% block content %}
 <h4 class="mb-3">Add Product</h4>
 <form method="post" style="max-width: 500px;">
-    {% csrf_token %}
-    <div class="mb-3">
-        <input type="text" name="name" class="form-control" placeholder="Title" required>
-    </div>
-    <div class="mb-3">
-        <input type="text" name="price" class="form-control" placeholder="Price" required>
-    </div>
-    <div class="mb-3">
-        <input type="text" name="image" class="form-control" placeholder="Image url" required>
-    </div>
-    <div class="mb-3">
-        <select name="category" class="form-select" required>
-            <option value="">Category</option>
-            {% for category in categories %}
-            <option value="{{ category.pk }}">{{ category.name }}</option>
-            {% endfor %}
-        </select>
-    </div>
-    <div class="mb-3">
-        <textarea name="description" class="form-control" rows="4" placeholder="Description"></textarea>
-    </div>
+    {% include 'webapp/product_form.html' %}
     <button type="submit" class="btn btn-primary">Add product</button>
 </form>
 {% endblock %}
